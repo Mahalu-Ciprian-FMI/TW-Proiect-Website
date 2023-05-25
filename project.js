@@ -1,3 +1,4 @@
+
 window.addEventListener("load",function()
 {
     let elems=document.getElementsByClassName("stylechange")
@@ -64,7 +65,7 @@ function generateDivBox(i)
     {
         return Math.random()*(limit+50);
     }
-    const div=document.createElement("div");
+    const div=document.createElement("footer");
     div.style.width="50px";
     div.style.height="50px";
     div.style.position="absolute";
@@ -91,9 +92,21 @@ function localstoragefunction()
 {
     let x=prompt("Intorudecti data curenta")
     details={x};
-    localStorage.setItem("details",x)
+    localStorage.setItem("details",x);
 }
 function aflalocalstorage()
 {
     alert(localStorage.getItem("details"));
 }
+
+/*window.addEventListener("load",function()
+{
+    let a=document.getElementsByClassName("rc");
+    for(let i=0;i<a.length;i++)
+    {
+            let rd=Math.random();
+            a[i].style.fontSize=a[i].style.fontSize*100*rd;
+            a[i].style.color="rgba(100*rd,178*rd,256*rd,rd)";
+            a[i].style.font=Math.floor(3*rd);
+    }
+})*/
