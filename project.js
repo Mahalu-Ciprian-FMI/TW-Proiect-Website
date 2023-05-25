@@ -26,24 +26,26 @@ window.addEventListener("load",function()
             })
         })
 })
-/*
-prim=document.getElementById("nr_prim").value;
+
 function Prime()
 {
     let ok=1;
+    prim=document.getElementById("nr_prim").value;
     console.log(prim);
-    if(nr_prim==1)
+    if(prim==1)
+        {ok=0;alert(`Numarul ${prim} nu este un numar prim.`)}
+    if(prim%2==0)
         {ok=0;alert(`Numarul ${prim} nu este un numar prim.`)}
     for(let i=3;i*i<prim;i=i+2)
     {
         if(prim%i==0)
-            {ok=0;alert(`Numarul ${prim}nu este un numar prim.`)}
+            {ok=0;alert(`Numarul ${prim} nu este un numar prim.`)}
     }
     if(ok)
     {
-        console.log(`Ati introdus numarul ${prim}, un numar prim!`);
+        alert(`Ati introdus numarul ${prim}, un numar prim!`);
     }
-})*/
+}
 
 window.addEventListener("load",function()
 {
