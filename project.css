@@ -1,0 +1,225 @@
+
+*
+{
+    color:red;
+    font-style:normal;
+}
+html
+{
+    background-color:gray;
+}
+.sect:hover
+{
+    background-color:blue;   
+}
+div div div
+{
+    background-color:yellow;
+    font-style:italic;
+    text-align:right;
+    width:200px;
+    height:100px;
+}
+div:nth-child(2n)
+{
+    color:white;
+    text-align:center;
+}
+div section::after
+{
+    content:"child made from after";
+    background-color:blue;
+    font-size:2em;
+    font-style:italic;
+    font-weight:bolder;
+}
+@media screen and (max-height:500px)
+{
+    header
+    {
+        color:green;
+        font:200% vh
+    }
+}
+@media (hover:hover)
+{
+    header:hover
+    {
+        display:inline;
+        background-color:white;
+        color:blue;
+        font:100% vw;
+    }
+
+}
+aside
+{
+    opacity:0.3;
+    padding:10px;
+    margin:10px;
+    height:50px;
+    border:2px dotted black;
+    border-radius:2em;
+}
+#sectid
+{
+    display:inline;
+    background-color:black;
+}
+.flexcontainer
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    text-align:left;
+    gap:1em;
+    align-items:center;
+    border:10px solid black;
+    width:200px;
+    height:200px;
+}
+.flexelement1
+{
+    flex-grow:3;
+    background-color:white;
+    border:5px solid blue;
+    order:3;
+    color:black !important;
+}
+.flexelement2
+{
+    flex-grow:2;
+    background-color:white;
+    border:5px solid blue;
+    order:4;
+    color:black !important;
+}
+.flexelement3
+{
+    background-color:white;
+    border:5px solid blue;
+    order:1;
+    color:black !important;
+}
+.flexelement4
+{
+    background-color:white;
+    border:5px solid blue;
+    order:2;
+    color:black !important;
+}
+.gridelement1
+{
+    grid-area: g1
+}
+.gridelement2
+{
+    grid-area: g2
+}
+.gridelement3
+{
+    grid-area: g3
+}
+.gridelement4
+{
+    grid-area: g4
+}
+.gridelement5
+{
+    grid-area: g5
+}
+.gridelement6
+{
+    grid-area: g6
+}
+.gridcontainer
+{
+    display:grid;
+    grid-template-rows:repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
+    gap:3px;
+    border:5px solid red;
+    width:300px;
+    height:300px;
+    grid-template-areas:
+        "g1 g1 g2 g3"
+        "g4 . . g5"
+        ". . . g5"
+        ". g6 g6 ."
+}
+.ge
+{
+    border:5px solid black;
+    background-color:white;
+    text-align:center !important;
+    color:red !important;
+}
+ul ul
+{
+    visibility:hidden;
+}
+ul li:hover ul
+{
+    visibility:visible;
+}
+.tr
+{
+    display:inline-block;
+    text-align:left !important;
+    color:red !important;
+    background-color:blue;
+    border:2px solid black;
+}
+.tr1
+{
+    transition: font-size 2s;
+}
+.tr1:hover
+{
+    font-size:36px; /*deoarece este inline-block se foloseste font-size in loc de width,height etc*/
+    background-color:red;
+}
+.tr2
+{
+    transition: opacity 2s ease-out, rotate 5s ease-in;
+}
+.tr2:hover
+{
+    rotate:360deg;
+    opacity:0.1;
+}
+@keyframes movinganim
+{
+    0%{color:blueviolet;left:0px;top:0px;}
+    25%{color:darkred;left:100px;top:100px;}
+    50%{color:black;left:0px;top:100px;}
+    75%{color:aquamarine;left:100px;top:0px;}
+    100%{color:blueviolet;left:0px;top:0px;}
+}
+.moving
+{
+    text-align:left !important;
+}
+.moving:active
+{
+    position:relative;
+    animation-name:movinganim;
+    animation-duration:5s;
+}
+@keyframes rotation
+{
+    0%{font-size:10px;width:100px;transform:rotate(0deg)}
+    50%{font-size:50px;width:150px;transform:rotate(360deg)}
+    100%{font-size:10px;width:100px;transform:rotate(0deg)}
+}
+.rotation
+{
+    
+    animation:rotation 3s infinite reverse;
+}
+.hiddenfreespace
+{
+    visibility:hidden !important;
+}
+
+
